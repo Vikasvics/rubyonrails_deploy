@@ -1,10 +1,10 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.2"
 
-set :application, "rails_deploy"
-set :repo_url, "https://github.com/Vikasvics/rubyonrails_deploy.git"
+set :application, 'rails_deploy'
+set :repo_url, 'git@github.com:Vikasvics/rubyonrails_deploy.git' # Edit this to match your repository
 set :branch, :master
-set :deploy_to, "/u01/apps/qwinix/rails_deploy"
+set :deploy_to, '/home/deploy/u01/apps/qwinix/rails_deploy'
 set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}

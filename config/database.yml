@@ -23,3 +23,12 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+  production:
+    adapter: postgresql
+    encoding: unicode
+    database: timehseet_production
+    username: deploy
+    password: password
+    host: localhost
+    port: 5432
