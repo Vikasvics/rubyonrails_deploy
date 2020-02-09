@@ -59,19 +59,19 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-# set :user, "deploy"
+set :user, "deploy"
 
-# set :stage, :production
-# set :branch, :master
-# set :deploy_to, "/u01/apps/qwinix/rails_deploy"
-# role :app, %w{deploy@52.66.213.197}
-# role :web, %w{deploy@52.66.213.197}
-# role :db, %w{deploy@52.66.213.197}
-# server '52.66.213.197', roles: %w{:web, :app, :db}, user: 'deploy'
-# #before "deploy", "puma:create_puma_bind_file_for_production"
-# #after "deploy", "db:migrate_for_production"
-# set :ssh_options, {
-#   keys: %w(~/.ssh/id_rsa),
-#   auth_methods: %w(publickey)
-# }
-server '52.66.213.197', user: 'deploy', roles: %w{web app db}
+set :stage, :production
+set :branch, :master
+set :deploy_to, "/home/deploy/u01/apps/qwinix/rails_deploy"
+role :app, %w{deploy@52.66.213.197}
+role :web, %w{deploy@52.66.213.197}
+role :db, %w{deploy@52.66.213.197}
+server '52.66.213.197', roles: %w{:web, :app, :db}, user: 'deploy'
+#before "deploy", "puma:create_puma_bind_file_for_production"
+#after "deploy", "db:migrate_for_production"
+set :ssh_options, {
+  keys: %w(~/.ssh/id_rsa),
+  auth_methods: %w(publickey)
+}
+# server '52.66.213.197', user: 'deploy', roles: %w{web app db}
