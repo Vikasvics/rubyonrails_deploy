@@ -63,7 +63,7 @@ set :user, "deploy"
 
 set :stage, :production
 set :branch, :master
-set :deploy_to, "u01/apps/qwinix/rails_deploy"
+set :deploy_to, "home/deploy/u01/apps/qwinix/rails_deploy"
 role :app, %w{deploy@13.127.46.81}
 role :web, %w{deploy@13.127.46.81}
 role :db, %w{deploy@13.127.46.81}
