@@ -28,7 +28,7 @@ production:
     adapter: postgresql
     encoding: unicode
     database: timehseet_production
-    username: deploy
+    username: postgres
     password: password
     host: localhost
     port: 5432
